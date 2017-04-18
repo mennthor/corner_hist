@@ -28,11 +28,12 @@ h, bins = np.histogramdd(sample, bins=[20, 20, 30, 5])
 # In reality the histogram is assumed to be the only thing available.
 # If we had the sample we could just use the way better corner module.
 label = ["a1", "a2", "a3", "a4"]
-hist_args = {"color": "r"}
-hist2D_args = {"cmap": "jet"}
+hist_args={"color":"#353132"}  # My favourite "black"
+hist2D_args={"cmap": "Greys"}
 
 fig, ax = corner_hist.corner_hist(h, bins=bins, label=label,
                                   hist_args=hist_args,
                                   hist2D_args=hist2D_args)
 
 plt.savefig("corner_hist_demo.png", dpi=200)
+
