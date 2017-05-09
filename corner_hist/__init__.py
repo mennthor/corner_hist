@@ -11,6 +11,7 @@ quickly need to view all the 1D and 2D marginalizations.
 
 import numpy as _np
 import matplotlib.pyplot as _plt
+from matplotlib.colors import LogNorm, Normalize
 
 
 def corner_hist(h, bins, label=None, color="k", cmap="inferno",
@@ -54,7 +55,7 @@ def corner_hist(h, bins, label=None, color="k", cmap="inferno",
 
     # Labels are manually handled further below
     fig, ax = _plt.subplots(dim, dim, sharex=False,
-                           sharey=False, figsize=(4 * dim, 4 * dim))
+                            sharey=False, figsize=(4 * dim, 4 * dim))
 
     # First set correct axes limits
     for row in range(dim):
